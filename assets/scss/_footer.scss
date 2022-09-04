@@ -1,0 +1,175 @@
+.footer {
+    padding: 100px 40px;
+    background: #37003c;
+    background-image: url(../img/pl-footer.svg);
+    background-position: bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    color: $while;
+
+    &-copyright {
+        width: 100%;
+        padding: 2px 20px;
+        background-color: $while;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        ul {
+            display: flex;
+            gap: 15px;
+
+            li {
+                a {
+                    font-size: 12px;
+                    cursor: pointer;
+                    color: $dark;
+                    transition: all 0.2s linear;
+
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+
+                &:nth-child(1) {
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        img {
+            width: 100px;
+        }
+    }
+
+    &-column {
+        h3 {
+            font-weight: 500;
+            font-size: 23px;
+            margin-bottom: 10px;
+            color: $while;
+        }
+
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+        }
+    }
+
+    &-item {
+        width: 100%;
+        padding: 5px 0;
+        text-overflow: ellipsis;
+    }
+
+    &-link {
+        color: $while;
+        font-weight: 300;
+        font-size: 13px;
+        transition: all 0.2s linear;
+
+        i {
+            color: $secondary-color;
+            margin-left: 5px;
+        }
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    @media screen and (max-width: 787px) {
+        flex-wrap: wrap;
+        gap: 40px;
+
+        &-copyright {
+            padding: 50px;
+            flex-direction: column;
+
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 25px;
+
+                li {
+                    a {
+                        font-size: 12px;
+                        cursor: pointer;
+                        color: $dark;
+                        transition: all 0.2s linear;
+
+                        &:hover {
+                            color: $secondary-color;
+                        }
+                    }
+
+                    &:nth-child(1) {
+                        font-weight: 600;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            img {
+                width: 100px;
+            }
+        }
+
+        &-column {
+
+            width: 100%;
+            padding-bottom: 50px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+            h3 {
+                font-weight: 500;
+                font-size: 23px;
+                margin-bottom: 10px;
+                color: $while;
+            }
+
+            &-content {
+                display: flex;
+                justify-content: space-between;
+                gap: 25px;
+            }
+        }
+
+        &-item {
+            width: 100%;
+            padding: 5px 0;
+            text-overflow: ellipsis;
+        }
+
+        &-link {
+            color: $while;
+            font-weight: 300;
+            font-size: 14px;
+            transition: all 0.2s linear;
+
+            i {
+                color: $secondary-color;
+                margin-left: 5px;
+            }
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+
+
+
+
+
+
+}

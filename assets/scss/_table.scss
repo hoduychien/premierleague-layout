@@ -1,0 +1,138 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    padding: 20px;
+    margin: 35px 0;
+
+    a {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        color: $dark;
+        gap: 5px;
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    span {
+        display: flex;
+    }
+
+    p {
+        display: none;
+        text-transform: uppercase;
+    }
+
+    tr {
+        border-bottom: 1px solid $gray-hover;
+
+        td,
+        th {
+            text-align: center;
+            min-width: 50px;
+            padding: 10px 0;
+            font-size: 13px;
+            font-weight: 500;
+            position: relative;
+
+
+
+            &:nth-child(3) {
+                padding-right: 50px;
+                text-align: left;
+                padding-left: 10px;
+            }
+        }
+
+    }
+
+    &-result {
+        gap: 10px;
+        justify-content: center;
+
+        &-item {
+            width: 32px;
+            height: 32px;
+            border-radius: 100rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $while;
+            text-transform: uppercase;
+        }
+
+        &-logo {
+            width: 32px;
+            height: 32px;
+            border: 1px solid $gray-hover;
+            border-radius: 100rem;
+            position: relative;
+
+            img {
+                width: 24px;
+                height: 24px;
+                object-fit: cover;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    @media screen and (max-width: 1023.98px) {
+
+        tr {
+
+            td,
+            th {
+                min-width: 40px;
+                font-size: 12px;
+
+                &:nth-child(12) {
+                    display: none;
+                }
+            }
+
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+
+        span {
+            display: none;
+        }
+
+        p {
+            display: block;
+        }
+
+        tr {
+
+            td,
+            th {
+                min-width: 40px;
+                font-size: 12px;
+
+                &:nth-child(12),
+                &:nth-child(8),
+                &:nth-child(9),
+                &:last-child {
+                    display: none;
+                }
+
+                &:nth-child(3) {
+                    padding-right: 15px;
+                    padding-left: 0;
+                    text-align: center;
+                }
+            }
+
+        }
+    }
+
+
+}

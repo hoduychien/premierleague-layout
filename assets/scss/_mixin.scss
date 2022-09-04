@@ -1,0 +1,29 @@
+@mixin selection {
+    &::selection {
+        background: $secondary-color;
+        color: $while;
+    }
+}
+
+@mixin menu-style {
+    padding: 0 20px;
+    line-height: 60px;
+    color: inherit;
+    font-weight: 500;
+    font-size: 15px;
+    @include selection;
+}
+
+@mixin nav-active {
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 0;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(90deg, #963cff, #a64dae);
+        transition: .2s;
+    }
+}

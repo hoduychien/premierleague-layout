@@ -1,0 +1,70 @@
+.filter {
+    border: 1px solid $gray-hover;
+    padding: 18px;
+    margin: 20px 10px;
+
+    &-season {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    &-left {
+        position: relative;
+        padding-right: 120px;
+        border-right: 1px solid $gray-hover;
+
+        i {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 14px;
+
+            &:hover {
+                color: $secondary-color;
+            }
+
+        }
+    }
+
+    &-heading {
+        font-style: italic;
+        font-size: 12px;
+        color: $secondary-color;
+        cursor: pointer;
+    }
+
+    &-year {
+        margin-top: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        color: #000;
+        transition: all 0.2s linear;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    &-right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.1s linear;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    @media screen and (max-width: 1023.98px) {
+        display: none;
+    }
+
+}

@@ -1,0 +1,35 @@
+body {
+    font-size: 16px;
+    line-height: 1;
+    font-family: $font;
+    color: $dark;
+    font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+* {
+    @include selection;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 100rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
