@@ -44,13 +44,13 @@
         justify-content: space-between;
         align-items: center;
         background-color: $primary-color;
-        padding: 0 10px;
         padding-left: 20px;
         transition: all 0.2s linear;
     }
 
     &-menu {
         padding-left: 125px;
+        height: 50px;
         display: flex;
         align-items: center;
         list-style: none;
@@ -75,7 +75,7 @@
             &-sm {
                 position: absolute;
                 left: -20px;
-                top: 0;
+                top: -5px;
                 z-index: 99;
                 display: none;
             }
@@ -88,7 +88,6 @@
 
         &-item {
             color: $while;
-
         }
 
         &-link {
@@ -107,6 +106,7 @@
     }
 
     &-auth {
+        height: 50px;
         color: $while;
         display: flex;
         align-items: center;
@@ -117,13 +117,15 @@
 
         &-link {
             @include menu-style;
+            height: 50px;
+            line-height: 50px;
             text-decoration: none;
         }
 
-        i {
-            padding: 0 8px;
+        i,
+        label {
+            padding: 0 20px;
             color: $while;
-            margin-left: 20px;
             cursor: pointer;
         }
     }
@@ -205,6 +207,127 @@
     }
 
 
+    &-checkbox {
+        display: none;
+
+        &:checked~.header-mobile {
+            transform: translateX(0%);
+        }
+
+    }
+
+    &-mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: $primary-color;
+        z-index: 9999999 !important;
+        transform: translateX(-100%);
+        transition: transform 0.2s linear;
+
+        &-head {
+            height: 60px;
+            background-color: $primary-color;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid $close;
+            overflow: hidden;
+            position: relative;
+
+            img {
+                width: 100px;
+                margin: 0 20px;
+            }
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+        }
+
+        &-link {
+            padding: 0 20px;
+            height: 50px;
+            line-height: 50px;
+            color: inherit;
+            font-weight: 500;
+            font-size: 15px;
+
+            &:first-child {
+                display: none;
+            }
+        }
+
+        &-toggle {
+            &-exit {
+                font-size: 18px;
+                height: 60px;
+                width: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $close;
+                margin-left: 10px;
+            }
+        }
+
+        &-sub-menu {
+            position: absolute;
+            width: 185%;
+            top: 0;
+            right: calc(-185% - 2px);
+            height: 100vh;
+            background-color: $while;
+            overflow: scroll;
+
+            &-item {
+                padding: 20px;
+                font-size: 12px;
+                font-weight: 500;
+                color: $dark;
+                border-bottom: 1px solid $gray-hover;
+            }
+        }
+
+        &-menu {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            bottom: 0;
+            width: 35%;
+            color: $while;
+            display: flex;
+            flex-direction: column;
+
+
+
+            &-item {
+                background: #37003c;
+                padding: 20px;
+
+                &-active {
+                    background: #4e0056;
+                }
+
+                a {
+                    color: $while;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+
+
+
+
+            }
+        }
+    }
+
+
 
 
 
@@ -271,7 +394,6 @@
         }
 
         &-middle {
-            padding-right: 10px;
             overflow: hidden;
         }
 
@@ -279,7 +401,7 @@
             &-logo {
                 &-sm {
                     left: -20px;
-                    top: -30px;
+                    top: -5px;
                 }
             }
 
@@ -305,7 +427,7 @@
             &-link {
                 padding: 0;
 
-                &:nth-child(1) {
+                &:first-child {
                     display: none;
                 }
             }
@@ -317,10 +439,6 @@
             a {
                 font-size: 12px;
                 padding: 0 10px;
-
-                &:nth-child(1) {
-                    display: none;
-                }
             }
         }
 
