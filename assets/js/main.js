@@ -16,3 +16,13 @@ let heroSocial = document.querySelector(".hero-share-social");
 heroShareBtn.addEventListener("click", () => {
     heroSocial.classList.toggle("visible");
 })
+
+let loader = document.querySelector(".loader")
+
+window.onload = () => {
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 1000)
+
+}
+
